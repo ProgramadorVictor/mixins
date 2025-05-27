@@ -1,26 +1,20 @@
 <template>
     <div>
         <h3>Lista Filmes</h3>
-        <input type="text" name="" id="" placeholder="Nome do filme" v-model="filme">
-        <button type="button" @click="adicionarFilme">Adicionar</button>
+        <input type="text" name="" id="" placeholder="Nome do filme" v-model="item">
+        <button type="button" @click="adicionarItem">Adicionar</button>
         <br>
         <ul>
-            <li v-for="(filme, index) in filmes" :key="index">{{ filme }}</li>
+            <li v-for="(item, index) in itens" :key="index">{{ item }}</li>
         </ul>
     </div>
 </template>
 <script>
+    import ListaMixins from '@/mixins/listaMixins';
+
     export default {
         name: 'ListaFilmes',
-        data: () => ({
-            filmes: [],
-            filme: ''
-        }),
-        methods: {
-            adicionarFilme(){
-                this.filmes.push(this.filme)
-            }
-        }
+        mixins: [ListaMixins]
     }
 </script>
 <style lang="css">
