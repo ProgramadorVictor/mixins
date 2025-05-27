@@ -7,14 +7,16 @@
         <ul>
             <li v-for="(item, index) in itens" :key="index">{{ item }}</li>
         </ul>
+        <button type="button" @click="removerItem()">Remover</button>
     </div>
 </template>
 <script>
     import ListaMixins from '@/mixins/listaMixins';
+    import RemoverListaMixin from '@/mixins/removeListaMixins'
 
     export default {
         name: 'ListaFilmes',
-        mixins: [ListaMixins], //Tudo que é usado pelo objeto 'ListaMixins' pode ser usado agora neste componente ListaFilmes.vue
+        mixins: [ListaMixins, RemoverListaMixin], //Tudo que é usado pelo objeto 'ListaMixins' pode ser usado agora neste componente ListaFilmes.vue
         //Propriedades, literalmente tudo que é usado pelo mixin é trago para 'ListaFilmes'.
     }
 </script>

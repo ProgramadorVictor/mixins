@@ -7,14 +7,16 @@
         <ul>
             <li v-for="(item, index) in itens" :key="index">{{ item }}</li>
         </ul>
+        <button type="button" @click="removerItem()">Remover</button>
     </div>
 </template>
 <script>
     import ListaMixins from '@/mixins/listaMixins';
+    import RemoverListaMixin from '@/mixins/removeListaMixins'
 
     export default {
         name: 'ListaVideogames',
-        mixins: [ListaMixins]
+        mixins: [ListaMixins, RemoverListaMixin]
     }
 </script>
 <style lang="css">
