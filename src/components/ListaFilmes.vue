@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Lista Filmes</h3>
+        <h3>{{ titulo }}</h3>
         <input type="text" name="" id="" placeholder="Nome do filme" v-model="item">
         <button type="button" @click="adicionarItem">Adicionar</button>
         <br>
@@ -16,6 +16,9 @@
 
     export default {
         name: 'ListaFilmes',
+        data: () => ({
+            titulo: 'Lista Filmes'
+        }),
         mixins: [ListaMixins, RemoverListaMixin]
     }
 </script>

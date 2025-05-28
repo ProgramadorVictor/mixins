@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Lista Pessoas</h3>
+        <h3>{{ titulo }}</h3>
         <input type="text" name="" id="" placeholder="Nome da pessoa" v-model="item">
         <button type="button" @click="adicionarItem">Adicionar</button>
         <br>
@@ -16,6 +16,9 @@
 
     export default {
         name: 'ListaFilmes',
+        data: () => ({
+            titulo: 'Lista Pessoas'
+        }),
         mixins: [ListaMixins, RemoverListaMixin], //Tudo que é usado pelo objeto 'ListaMixins' pode ser usado agora neste componente ListaFilmes.vue
         //Propriedades, literalmente tudo que é usado pelo mixin é trago para 'ListaFilmes'.
     }
