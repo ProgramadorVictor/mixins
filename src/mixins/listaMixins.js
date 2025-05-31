@@ -12,6 +12,9 @@ export default {
             this.itens.push(this.item)
             this.item = ''
         }
+    },
+    created(){
+        console.log('ListaMixin foi criado.')
     }
 }
 //Basicamente é a mesma ídeia que um objeto vue, com as propriedades, porém definindo um objeto em Js.

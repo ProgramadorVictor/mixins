@@ -19,7 +19,10 @@
         data: () => ({
             titulo: 'Lista Filmes'
         }),
-        mixins: [ListaMixins, RemoverListaMixin]
+        mixins: [ListaMixins, RemoverListaMixin],
+        created(){
+            console.log('ListaFilmes foi criado.')
+        }
     }
 </script>
 <style lang="css">
